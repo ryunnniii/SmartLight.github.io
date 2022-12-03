@@ -1,7 +1,6 @@
 # Automatic indoor light adjustment
 - 
 
-Video link: [link](https://youtu.be/b7U7djRR5X8)
 
 ## Introduction
 ### Motivation
