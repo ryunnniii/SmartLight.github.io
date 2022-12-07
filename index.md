@@ -69,7 +69,11 @@ it in Pico. So could we have method to enlarge the storage space of
 Pico?
 
 ### Future Plan
+To overcome difficulties and make the control algorithm more robust, further experiment below is needed.
 
+1. Lighting control algorithm optimization for more effective and sensitive control.
+2. Add correlated color temperature as an input variable for human visual comfort by providing a better lighting environment for working and studying.
+3. Improve the algorithm to detect the exact distance between each light feature to the sensor for adjusting each lighting feature's light intensity independently. 
 
 ## Methodology
 ### Phenomena of Interest
@@ -258,12 +262,9 @@ intensity under bright experiment.
 
 ## Discussion
 
-In this project, we are trying to adjust the brightness of the smart bulb based on the surrounding light intensity. Raspberry pi pico with the light intensity sensor was used for the hardware to achieve this goal. The result shows that we can control the brightness of the smart light feature successfully, but because of the range of the available light intensity of the bulb, we had to adjust the threshold much lower than our goal. For the future goal, we can optimize the control algorithm to sensitively react to the surrounding light intensity for better human visual comfort for working. In this optimization process, we can use not only the light intensity, but also the color temperature as an input variable for better human visual comfort.
+In this project, we are trying to adjust the brightness of the smart bulb based on the surrounding light intensity. Raspberry pi pico with the light intensity sensor was used for the hardware to achieve this goal. The result shows that we can control the brightness of the smart light feature successfully. 
+However, there are several limitations in this project. First, we had a technical issue. we had to adjust the threshold much lower than our goal because of the range of the available light intensity of the bulbs. In addition, the developed algorithm cannot control the single light bulb's light intensity by its distance from the bulb. We presume that we programmed the algorithm to react to the overall surrounding light intensity, so the sensor only measures average or the total light intensity of two bulbs around the sensor. To overcome these issues, the further experiment is needed.
 
-In this project, we find the variety process of LED light intensity is like
-simulation the process of mobile phone screen brightness adjustment.
-However, we still cannot detect exact distance between each light to the
-sensor. Therefore, the two lights can only adjust their light with same
-pace. They can not detect their own light independently.
+For the future goal, we can optimize the control algorithm to sensitively react to the surrounding light intensity for better human visual comfort for working. In this optimization process, we can use not only the light intensity, but also the color temperature as an input variable for better human visual comfort. Also, we need to code the algorithm that could control multiple light bulbs individually. To achieve this goal, the possible solution is to use separate light intensity sensor per each light bulb, or we need a sensor that could visually detect the distance between the light bulb and occupant (e.g. camera) and control the light based on the measured distance and measured light intensity. Elaborating this process, we need further research on this methodology.
 
 ## Referrence
